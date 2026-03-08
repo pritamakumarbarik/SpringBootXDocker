@@ -1,2 +1,2 @@
 # SpringBootXDocker
-In this Repo we going to teach how to setup spring boot microservices with docker
+In this Repo I am going to teach how to setup spring boot microservices with docker
