@@ -1,0 +1,20 @@
+server:
+  port: 9090
+
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: user-service-route
+          # Change localhost to the service name from docker-compose
+          uri: http://user-service:8081 
+          predicates:
+            - Path=/user/**
+            
+        - id: payment-service-route
+          # Change localhost to the service name from docker-compose
+          uri: http://payment-service:8082 
+          predicates:
+            - Path=/payment/**
